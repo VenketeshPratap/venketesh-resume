@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venketesh Mall - Software Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 50px;
+            background: #fff;
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                padding: 15px 40px;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+            @page {
+                margin: 0.5in;
+                size: letter;
+            }
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 12px;
+        }
+        
+        .header h1 {
+            font-size: 30px;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            font-size: 10.5px;
+            color: #666;
+            margin-top: 6px;
+        }
+        
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        /* Section Headers */
+        .section {
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2c3e50;
+            text-transform: uppercase;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Summary */
+        .summary {
+            font-size: 11px;
+            text-align: justify;
+            line-height: 1.45;
+            color: #444;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 6px 15px;
+            font-size: 10.5px;
+        }
+        
+        .skill-category {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .skill-items {
+            color: #555;
+        }
+        
+        /* Experience */
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .job-date {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .company-name {
+            font-size: 11px;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .job-description {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job-description li {
+            font-size: 10.5px;
+            margin-bottom: 5px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.45;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .job-description li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Projects */
+        .project-tech {
+            font-size: 9.5px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        /* Education */
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        
+        .degree {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .institution {
+            font-size: 10.5px;
+            color: #555;
+            margin-bottom: 2px;
+        }
+        
+        .education-details {
+            font-size: 9.5px;
+            color: #666;
+        }
+        
+        /* Highlights Box */
+        .highlights {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+        }
+        
+        .highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .highlights li {
+            font-size: 10.5px;
+            margin-bottom: 4px;
+            padding-left: 15px;
+            position: relative;
+            color: #444;
+            line-height: 1.4;
+        }
+        
+        .highlights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        /* Instructions Box */
+        .instructions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .instructions h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions h3 {
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .instructions ol, .instructions ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .instructions code {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .instructions strong {
+            color: #ffd700;
+        }
+        
+        .method-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #ffd700;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(39,174,96,0.3);
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39,174,96,0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Instructions Section -->
+    <div class="instructions no-print">
+        <h2>📥 How to Download Your Resume as PDF</h2>
+        
+        <div class="method-box">
+            <h3>🥇 Method 1: Browser Print (RECOMMENDED - Best Quality)</h3>
+            <ol>
+                <li>Click the <strong>"Print & Save as PDF"</strong> button below</li>
+                <li>In the print dialog:
+                    <ul>
+                        <li>Destination: <strong>Save as PDF</strong></li>
+                        <li>Paper size: <strong>Letter</strong> (or A4)</li>
+                        <li>Margins: <strong>Default</strong></li>
+                        <li>Scale: <strong>100%</strong></li>
+                        <li>Options: <strong>Uncheck</strong> "Headers and footers"</li>
+                    </ul>
+                </li>
+                <li>Click <strong>Save</strong> → Name it <code>Venketesh_Mall_Resume.pdf</code></li>
+            </ol>
+        </div>
+        
+        <div class="method-box">
+            <h3>🥈 Method 2: Copy to Google Docs (Easy Editing)</h3>
+            <ol>
+                <li>Scroll down and <strong>select all text</strong> below (Ctrl+A after instructions)</li>
+                <li>Copy (Ctrl+C)</li>
+                <li>Open <strong>Google Docs</strong> → Create new document</li>
+                <li>Paste (Ctrl+V)</li>
+                <li>Adjust formatting if needed</li>
+                <li>File → Download → <strong>PDF Document (.pdf)</strong></li>
+            </ol>
+        </div>
+        
+        <div class="method-box">
+            <h3>🥉 Method 3: Online Converter</h3>
+            <ol>
+                <li>Right-click anywhere below → <strong>Save as...</strong> → Save as HTML file</li>
+                <li>Visit: <strong>cloudconvert.com/html-to-pdf</strong></li>
+                <li>Upload your HTML file → Convert → Download PDF</li>
+            </ol>
+        </div>
+        
+        <button class="download-btn" onclick="window.print()">🖨️ Print & Save as PDF</button>
+        
+        <h3 style="margin-top: 25px;">💡 GitHub Repository Naming</h3>
+        <p><strong>YES!</strong> Perfect names for GitHub repo:</p>
+        <ul>
+            <li>✅ <code>venketesh-portfolio</code> (Good - professional)</li>
+            <li>✅ <code>venketesh-resume</code> (Better - clear purpose)</li>
+            <li>✅ <code>resume</code> (Simple - works great)</li>
+            <li>✅ <code>cv-venketesh-mall</code> (Alternative)</li>
+        </ul>
+        <p>📌 <strong>Pro Tip:</strong> Add a <code>README.md</code> with your summary, tech stack, and link to deployed resume!</p>
+    </div>
+
+    <!-- RESUME STARTS HERE -->
+    <div class="header avoid-break">
+        <h1>VENKETESH MALL</h1>
+        <div class="subtitle">Senior Backend Engineer | Python Specialist</div>
+        <div class="contact-info">
+            📞 +91-9569888936 | ✉️ venketeshmall2@gmail.com | 
+            <a href="https://www.linkedin.com/in/venketeshmall/" target="_blank">🔗 LinkedIn</a> | 
+            <a href="https://github.com/VenketeshPratap" target="_blank">💻 GitHub</a>
+        </div>
+    </div>
+
+    <!-- Key Highlights -->
+    <div class="section avoid-break">
+        <div class="section-title">Key Achievements</div>
+        <div class="highlights">
+            <ul>
+                <li><strong>Performance Optimization:</strong> Reduced API response times by 30% through Redis caching and query optimization across 50k+ daily requests</li>
+                <li><strong>Enterprise Systems:</strong> Developed audit-logging system tracking 50M+ transactions/month across 15+ microservices</li>
+                <li><strong>Batch Processing:</strong> Optimized high-volume data processing pipeline to handle 100k+ records/hour, improving throughput by 250%</li>
+                <li><strong>Database Optimization:</strong> Eliminated N+1 query patterns, reducing average query count from 45 to 3 per request and cutting P95 latency by 75%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Profile Summary -->
+    <div class="section avoid-break">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            Backend Engineer with 4+ years of experience building high-performance, scalable systems at enterprise level. Proven expertise in developing secure applications, optimizing database performance, and implementing sophisticated caching strategies that deliver measurable business impact. Skilled in Python ecosystem (Django, FastAPI), microservices architecture, and modern DevOps practices. Track record of reducing API latency by 30%, optimizing batch processing pipelines by 250%, and building robust audit systems handling 50M+ transactions monthly. Strong foundation in system design, API security, and delivering reliable solutions that support thousands of concurrent users.
+        </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section avoid-break">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category">Languages:</div>
+            <div class="skill-items">Python (Expert), SQL, JavaScript (Proficient), Java (Familiar)</div>
+            
+            <div class="skill-category">Backend Frameworks:</div>
+            <div class="skill-items">Django, FastAPI, Flask | REST APIs, GraphQL basics</div>
+            
+            <div class="skill-category">Databases:</div>
+            <div class="skill-items">PostgreSQL, MySQL, MongoDB, Redis (Caching & Pub/Sub)</div>
+            
+            <div class="skill-category">DevOps & Cloud:</div>
+            <div class="skill-items">Docker, AWS (EC2, S3), Git, Postman</div>
+            
+            <div class="skill-category">Architecture:</div>
+            <div class="skill-items">Microservices, System Design, Design Patterns, Event-Driven Architecture</div>
+            
+            <div class="skill-category">Observability:</div>
+            <div class="skill-items">Prometheus, Grafana, Structured Logging, Performance Monitoring</div>
+            
+            <div class="skill-category">AI/ML Integration:</div>
+            <div class="skill-items">OpenAI GPT-4, Amazon Bedrock (Foundation Models)</div>
+            
+            <div class="skill-category">Additional:</div>
+            <div class="skill-items">Data Structures & Algorithms, API Security (JWT, OAuth 2.0, RBAC), Rate Limiting</div>
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        
+        <!-- Hashedin -->
+        <div class="experience-item avoid-break">
+            <div class="job-header">
+                <div class="job-title">Software Engineer II</div>
+                <div class="job-date">September 2024 – Present</div>
+            </div>
+            <div class="company-name">Hashedin by Deloitte | Bangalore, Karnataka</div>
+            <ul class="job-description">
+                <li>Architected enterprise audit-logging system tracking 50M+ transactions/month across 15+ microservices, reducing compliance reporting time by 40% and eliminating 500+ lines of duplicate boilerplate code through centralized mutation tracking</li>
+                <li>Optimized high-volume batch processing pipeline to handle 100k+ records/hour using transactional chunking and parallel processing, improving throughput by 250% while maintaining ACID guarantees and data consistency</li>
+                <li>Eliminated N+1 query bottlenecks through strategic select_related() and prefetch_related() optimization, reducing average query count from 45 to 3 per request and cutting P95 latency from 800ms to 200ms under production load</li>
+                <li>Designed and implemented Redis caching layer with intelligent TTL-based invalidation strategy, achieving 85% cache hit rate and reducing database load by 60% during peak traffic with 10k+ concurrent users</li>
+                <li>Built scalable RESTful APIs supporting 50k+ daily requests with comprehensive input validation, structured error handling, and monitoring, maintaining sub-300ms response times for critical user-facing endpoints</li>
+            </ul>
+        </div>
+        
+        <!-- LTIMindtree -->
+        <div class="experience-item avoid-break">
+            <div class="job-header">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-date">October 2021 – September 2024</div>
+            </div>
+            <div class="company-name">LTIMindtree | Bangalore, Karnataka</div>
+            <ul class="job-description">
+                <li>Architected secure multi-tenant application processing 500k+ API requests/day for 10k+ users across 50+ organizations, implementing comprehensive RBAC with 20+ roles, JWT authentication with refresh token rotation, and per-tenant rate limiting (100 req/min) using token bucket algorithm</li>
+                <li>Integrated OpenAI GPT-4 Turbo and Claude models via Amazon Bedrock to deliver contextual product recommendations, processing 10k+ AI-assisted searches daily with sub-2s latency and achieving 20% increase in user engagement plus 15% improvement in conversion rates</li>
+                <li>Designed and deployed 25+ production-grade RESTful APIs with Pydantic schema validation, per-route rate limiting, structured JSON logging, and comprehensive error handling; maintained 99.5% uptime with P99 latency under 300ms across 50k+ daily requests</li>
+                <li>Optimized MySQL database performance through strategic composite indexing, query optimization, and HikariCP connection pooling (50-100 connections), reducing average query execution time by 40% and supporting 5x traffic growth without infrastructure upgrades</li>
+                <li>Implemented comprehensive observability stack with Prometheus metrics collection and Grafana dashboards for real-time monitoring of API latency, error rates, throughput, and resource utilization, enabling proactive issue detection and resolution</li>
+                <li>Managed complex schema migrations across MySQL and SQLite databases using Alembic, ensuring zero-downtime deployments and backward compatibility through feature flags and gradual rollout strategies</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page break hint for print -->
+    <div class="page-break"></div>
+
+    <!-- Projects -->
+    <div class="section">
+        <div class="section-title">Personal Projects</div>
+        
+        <!-- E-commerce -->
+        <div class="project-item avoid-break">
+            <div class="job-header">
+                <div class="job-title">E-commerce Backend System</div>
+                <div class="job-date">May 2024 – Present</div>
+            </div>
+            <div class="project-tech">Python, FastAPI, PostgreSQL, Redis, Docker, JWT, OAuth 2.0</div>
+            <ul class="job-description">
+                <li>Architected scalable e-commerce REST API handling product catalog, shopping cart, order processing, and payment workflows with 95% test coverage (pytest) and consistent sub-200ms P95 response times</li>
+                <li>Implemented OAuth 2.0 Google SSO integration and JWT-based authentication with refresh token rotation for secure user sessions; designed granular permission system supporting admin, vendor, and customer roles</li>
+                <li>Built distributed caching layer using Redis for product catalog, inventory management, and user sessions, achieving 90% cache hit rate and successfully supporting 1000+ concurrent users during load testing (Locust)</li>
+                <li>Designed optimized database schema with strategic indexing for complex product filtering (price ranges, categories, ratings, availability), achieving query times under 50ms on datasets with 100k+ products</li>
+                <li>Architected application with clear domain boundaries (User, Product, Order, Payment services) for future microservices decomposition, currently deployed as modular monolith with Docker containerization</li>
+            </ul>
+        </div>
+        
+        <!-- BookMyShow -->
+        <div class="project-item avoid-break">
+            <div class="job-header">
+                <div class="job-title">BookMyShow Clone - Event Ticketing System</div>
+                <div class="job-date">September 2024</div>
+            </div>
+            <div class="project-tech">Python, Django, MySQL, Redis, JWT Authentication</div>
+            <ul class="job-description">
+                <li>Developed comprehensive ticketing platform with JWT authentication, featuring 20+ API endpoints for event browsing, seat selection, booking management, and real-time availability checks with pessimistic locking to prevent double-booking</li>
+                <li>Created custom Django models for users, events, venues, shows, and bookings with optimized database schema; implemented composite indexing strategies for efficient event filtering by date, location, genre, and price range</li>
+                <li>Built Redis-based inventory management system for real-time seat availability tracking, reducing database load by 70% and ensuring consistent availability data across concurrent booking requests</li>
+                <li>Implemented scheduled task system using Celery for automated booking expiry, payment verification, and email notifications, processing 1000+ background tasks daily</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        
+        <div class="education-item avoid-break">
+            <div class="education-header">
+                <div class="degree">Bachelor of Engineering in Information Science & Engineering</div>
+                <div class="job-date">2017 – 2021</div>
+            </div>
+            <div class="institution">Bapuji Institute of Engineering and Technology, Davangere, Karnataka</div>
+            <div class="education-details">CGPA: 7.91/10.0 | Relevant Coursework: Data Structures, Algorithms, Database Management, Operating Systems, Computer Networks</div>
+        </div>
+        
+        <div class="education-item avoid-break">
+            <div class="education-header">
+                <div class="degree">Intermediate (PCM)</div>
+                <div class="job-date">2015 – 2016</div>
+            </div>
+            <div class="institution">Shaheed Inter College, Mau, Uttar Pradesh</div>
+            <div class="education-details">Percentage: 87.40%</div>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section avoid-break">
+        <div class="section-title">Certifications & Continuous Learning</div>
+        <ul class="job-description">
+            <li>Python Backend Development - Advanced concepts and best practices</li>
+            <li>Data Structures & Algorithms - Problem-solving and optimization techniques</li>
+            <li>System Design & Architecture - Scalable distributed systems design patterns</li>
+        </ul>
+    </div>
+
+</body>
+</html>
