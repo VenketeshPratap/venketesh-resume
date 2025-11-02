@@ -13,61 +13,50 @@
         
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             color: #333;
             max-width: 850px;
             margin: 0 auto;
-            padding: 30px 50px;
+            padding: 40px 50px;
             background: #fff;
         }
         
-        /* Print-specific styles */
         @media print {
             body {
-                padding: 15px 40px;
+                padding: 20px;
                 max-width: 100%;
             }
             .no-print {
-                display: none !important;
-            }
-            .page-break {
-                page-break-after: always;
-            }
-            .avoid-break {
-                page-break-inside: avoid;
-            }
-            @page {
-                margin: 0.5in;
-                size: letter;
+                display: none;
             }
         }
         
         /* Header */
         .header {
             text-align: center;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #2c3e50;
-            padding-bottom: 12px;
+            padding-bottom: 15px;
         }
         
         .header h1 {
-            font-size: 30px;
+            font-size: 32px;
             color: #2c3e50;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             font-weight: 700;
         }
         
         .header .subtitle {
-            font-size: 15px;
+            font-size: 16px;
             color: #555;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
         
         .contact-info {
-            font-size: 10.5px;
+            font-size: 11px;
             color: #666;
-            margin-top: 6px;
+            margin-top: 8px;
         }
         
         .contact-info a {
@@ -77,25 +66,25 @@
         
         /* Section Headers */
         .section {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
         
         .section-title {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 700;
             color: #2c3e50;
             text-transform: uppercase;
             border-bottom: 2px solid #3498db;
-            padding-bottom: 4px;
-            margin-bottom: 10px;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
             letter-spacing: 0.5px;
         }
         
         /* Summary */
         .summary {
-            font-size: 11px;
+            font-size: 11.5px;
             text-align: justify;
-            line-height: 1.45;
+            line-height: 1.5;
             color: #444;
         }
         
@@ -103,8 +92,8 @@
         .skills-grid {
             display: grid;
             grid-template-columns: 140px 1fr;
-            gap: 6px 15px;
-            font-size: 10.5px;
+            gap: 8px 15px;
+            font-size: 11px;
         }
         
         .skill-category {
@@ -118,18 +107,18 @@
         
         /* Experience */
         .experience-item, .project-item, .education-item {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         
         .job-header, .project-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
         }
         
         .job-title {
-            font-size: 12.5px;
+            font-size: 13px;
             font-weight: 700;
             color: #2c3e50;
         }
@@ -141,10 +130,10 @@
         }
         
         .company-name {
-            font-size: 11px;
+            font-size: 11.5px;
             color: #555;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         
         .job-description {
@@ -153,11 +142,11 @@
         }
         
         .job-description li {
-            font-size: 10.5px;
-            margin-bottom: 5px;
+            font-size: 11px;
+            margin-bottom: 6px;
             padding-left: 18px;
             position: relative;
-            line-height: 1.45;
+            line-height: 1.5;
             color: #444;
             text-align: justify;
         }
@@ -172,10 +161,10 @@
         
         /* Projects */
         .project-tech {
-            font-size: 9.5px;
+            font-size: 10px;
             color: #666;
             font-style: italic;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         
         /* Education */
@@ -187,19 +176,19 @@
         }
         
         .degree {
-            font-size: 11.5px;
+            font-size: 12px;
             font-weight: 700;
             color: #2c3e50;
         }
         
         .institution {
-            font-size: 10.5px;
+            font-size: 11px;
             color: #555;
             margin-bottom: 2px;
         }
         
         .education-details {
-            font-size: 9.5px;
+            font-size: 10px;
             color: #666;
         }
         
@@ -207,8 +196,8 @@
         .highlights {
             background: #f8f9fa;
             border-left: 4px solid #3498db;
-            padding: 10px 14px;
-            margin-bottom: 16px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
         }
         
         .highlights ul {
@@ -217,12 +206,11 @@
         }
         
         .highlights li {
-            font-size: 10.5px;
-            margin-bottom: 4px;
+            font-size: 11px;
+            margin-bottom: 5px;
             padding-left: 15px;
             position: relative;
             color: #444;
-            line-height: 1.4;
         }
         
         .highlights li:before {
@@ -233,146 +221,32 @@
             font-weight: bold;
         }
         
-        /* Instructions Box */
-        .instructions {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .instructions h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .instructions h3 {
-            font-size: 16px;
-            margin-top: 15px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .instructions ol, .instructions ul {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .instructions li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .instructions code {
-            background: rgba(255,255,255,0.2);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 13px;
-        }
-        
-        .instructions strong {
-            color: #ffd700;
-        }
-        
-        .method-box {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border-left: 4px solid #ffd700;
-        }
-        
-        /* Download Button */
-        .download-btn {
-            background: #27ae60;
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
+            padding: 12px 24px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(39,174,96,0.3);
-            transition: all 0.3s;
-            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s;
         }
         
-        .download-btn:hover {
-            background: #229954;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(39,174,96,0.4);
+        .print-button:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
-    <!-- Instructions Section -->
-    <div class="instructions no-print">
-        <h2>📥 How to Download Your Resume as PDF</h2>
-        
-        <div class="method-box">
-            <h3>🥇 Method 1: Browser Print (RECOMMENDED - Best Quality)</h3>
-            <ol>
-                <li>Click the <strong>"Print & Save as PDF"</strong> button below</li>
-                <li>In the print dialog:
-                    <ul>
-                        <li>Destination: <strong>Save as PDF</strong></li>
-                        <li>Paper size: <strong>Letter</strong> (or A4)</li>
-                        <li>Margins: <strong>Default</strong></li>
-                        <li>Scale: <strong>100%</strong></li>
-                        <li>Options: <strong>Uncheck</strong> "Headers and footers"</li>
-                    </ul>
-                </li>
-                <li>Click <strong>Save</strong> → Name it <code>Venketesh_Mall_Resume.pdf</code></li>
-            </ol>
-        </div>
-        
-        <div class="method-box">
-            <h3>🥈 Method 2: Copy to Google Docs (Easy Editing)</h3>
-            <ol>
-                <li>Scroll down and <strong>select all text</strong> below (Ctrl+A after instructions)</li>
-                <li>Copy (Ctrl+C)</li>
-                <li>Open <strong>Google Docs</strong> → Create new document</li>
-                <li>Paste (Ctrl+V)</li>
-                <li>Adjust formatting if needed</li>
-                <li>File → Download → <strong>PDF Document (.pdf)</strong></li>
-            </ol>
-        </div>
-        
-        <div class="method-box">
-            <h3>🥉 Method 3: Online Converter</h3>
-            <ol>
-                <li>Right-click anywhere below → <strong>Save as...</strong> → Save as HTML file</li>
-                <li>Visit: <strong>cloudconvert.com/html-to-pdf</strong></li>
-                <li>Upload your HTML file → Convert → Download PDF</li>
-            </ol>
-        </div>
-        
-        <button class="download-btn" onclick="window.print()">🖨️ Print & Save as PDF</button>
-        
-        <h3 style="margin-top: 25px;">💡 GitHub Repository Naming</h3>
-        <p><strong>YES!</strong> Perfect names for GitHub repo:</p>
-        <ul>
-            <li>✅ <code>venketesh-portfolio</code> (Good - professional)</li>
-            <li>✅ <code>venketesh-resume</code> (Better - clear purpose)</li>
-            <li>✅ <code>resume</code> (Simple - works great)</li>
-            <li>✅ <code>cv-venketesh-mall</code> (Alternative)</li>
-        </ul>
-        <p>📌 <strong>Pro Tip:</strong> Add a <code>README.md</code> with your summary, tech stack, and link to deployed resume!</p>
-    </div>
-
-    <!-- RESUME STARTS HERE -->
-    <div class="header avoid-break">
+    <button class="print-button no-print" onclick="window.print()">📄 Download as PDF</button>
+    
+    <div class="header">
         <h1>VENKETESH MALL</h1>
         <div class="subtitle">Senior Backend Engineer | Python Specialist</div>
         <div class="contact-info">
@@ -383,7 +257,7 @@
     </div>
 
     <!-- Key Highlights -->
-    <div class="section avoid-break">
+    <div class="section">
         <div class="section-title">Key Achievements</div>
         <div class="highlights">
             <ul>
@@ -396,7 +270,7 @@
     </div>
 
     <!-- Profile Summary -->
-    <div class="section avoid-break">
+    <div class="section">
         <div class="section-title">Professional Summary</div>
         <div class="summary">
             Backend Engineer with 4+ years of experience building high-performance, scalable systems at enterprise level. Proven expertise in developing secure applications, optimizing database performance, and implementing sophisticated caching strategies that deliver measurable business impact. Skilled in Python ecosystem (Django, FastAPI), microservices architecture, and modern DevOps practices. Track record of reducing API latency by 30%, optimizing batch processing pipelines by 250%, and building robust audit systems handling 50M+ transactions monthly. Strong foundation in system design, API security, and delivering reliable solutions that support thousands of concurrent users.
@@ -404,7 +278,7 @@
     </div>
 
     <!-- Technical Skills -->
-    <div class="section avoid-break">
+    <div class="section">
         <div class="section-title">Technical Skills</div>
         <div class="skills-grid">
             <div class="skill-category">Languages:</div>
@@ -438,7 +312,7 @@
         <div class="section-title">Professional Experience</div>
         
         <!-- Hashedin -->
-        <div class="experience-item avoid-break">
+        <div class="experience-item">
             <div class="job-header">
                 <div class="job-title">Software Engineer II</div>
                 <div class="job-date">September 2024 – Present</div>
@@ -454,14 +328,14 @@
         </div>
         
         <!-- LTIMindtree -->
-        <div class="experience-item avoid-break">
+        <div class="experience-item">
             <div class="job-header">
                 <div class="job-title">Software Engineer</div>
                 <div class="job-date">October 2021 – September 2024</div>
             </div>
             <div class="company-name">LTIMindtree | Bangalore, Karnataka</div>
             <ul class="job-description">
-                <li>Architected secure multi-tenant application processing 500k+ API requests/day for 10k+ users across 50+ organizations, implementing comprehensive RBAC with 20+ roles, JWT authentication with refresh token rotation, and per-tenant rate limiting (100 req/min) using token bucket algorithm</li>
+                <li>Architected secure multi-tenant SaaS platform processing 500k+ API requests/day for 10k+ users across 50+ organizations, implementing comprehensive RBAC with 20+ roles, JWT authentication with refresh token rotation, and per-tenant rate limiting (100 req/min) using token bucket algorithm</li>
                 <li>Integrated OpenAI GPT-4 Turbo and Claude models via Amazon Bedrock to deliver contextual product recommendations, processing 10k+ AI-assisted searches daily with sub-2s latency and achieving 20% increase in user engagement plus 15% improvement in conversion rates</li>
                 <li>Designed and deployed 25+ production-grade RESTful APIs with Pydantic schema validation, per-route rate limiting, structured JSON logging, and comprehensive error handling; maintained 99.5% uptime with P99 latency under 300ms across 50k+ daily requests</li>
                 <li>Optimized MySQL database performance through strategic composite indexing, query optimization, and HikariCP connection pooling (50-100 connections), reducing average query execution time by 40% and supporting 5x traffic growth without infrastructure upgrades</li>
@@ -471,15 +345,12 @@
         </div>
     </div>
 
-    <!-- Page break hint for print -->
-    <div class="page-break"></div>
-
     <!-- Projects -->
     <div class="section">
         <div class="section-title">Personal Projects</div>
         
         <!-- E-commerce -->
-        <div class="project-item avoid-break">
+        <div class="project-item">
             <div class="job-header">
                 <div class="job-title">E-commerce Backend System</div>
                 <div class="job-date">May 2024 – Present</div>
@@ -495,7 +366,7 @@
         </div>
         
         <!-- BookMyShow -->
-        <div class="project-item avoid-break">
+        <div class="project-item">
             <div class="job-header">
                 <div class="job-title">BookMyShow Clone - Event Ticketing System</div>
                 <div class="job-date">September 2024</div>
@@ -514,7 +385,7 @@
     <div class="section">
         <div class="section-title">Education</div>
         
-        <div class="education-item avoid-break">
+        <div class="education-item">
             <div class="education-header">
                 <div class="degree">Bachelor of Engineering in Information Science & Engineering</div>
                 <div class="job-date">2017 – 2021</div>
@@ -523,7 +394,7 @@
             <div class="education-details">CGPA: 7.91/10.0 | Relevant Coursework: Data Structures, Algorithms, Database Management, Operating Systems, Computer Networks</div>
         </div>
         
-        <div class="education-item avoid-break">
+        <div class="education-item">
             <div class="education-header">
                 <div class="degree">Intermediate (PCM)</div>
                 <div class="job-date">2015 – 2016</div>
@@ -534,7 +405,7 @@
     </div>
 
     <!-- Certifications -->
-    <div class="section avoid-break">
+    <div class="section">
         <div class="section-title">Certifications & Continuous Learning</div>
         <ul class="job-description">
             <li>Python Backend Development - Advanced concepts and best practices</li>
